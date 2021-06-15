@@ -1,0 +1,82 @@
+---
+layout: base.njk
+title: Contacto
+description: Contacto
+keywords: Contacto
+---
+
+<main>
+  <section id="contacto" class="contacto">
+    <div class="contacto-top">
+      <h2 class="contacto-title">Contáctenos</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates
+        veritatis assumenda, harum tenetur modi magni explicabo ullam maxime,
+        sequi ducimus, rem sunt! Omnis, dolorum. Assumenda minus quam mollitia
+        totam tempora.
+      </p>
+    </div>
+
+    <div id="contacto-form-container" class="contacto-form-container">
+      <form id="contacto-form" class="contacto-form" action="" method="get">
+
+        <div class="contacto-form-group">
+          <label for="nombre">Nombre <span>(requerido)</span></label>
+          <div class="form-row"> 
+            <input type="text" name="nombre" id="nombre" minlength="3" aria-describedby="ayuda-nombre" autocomplete="name" required />
+            <span class="emoji" id="nombre-span" aria-live="polite" hidden>⚠️</span>
+          </div>
+          <small id="ayuda-nombre" class="ayuda">Su nombre completo para contactarle.</small>
+        </div>
+
+        <div class="contacto-form-group">
+          <label for="email">Email <span>(requerido)</span></label>
+          <div class="form-row">
+            <input type="email" name="email" id="email" minlength="8" aria-describedby="ayuda-email" autocomplete="email" required />
+            <span class="emoji" id="email-span" aria-live="polite" hidden>⚠️</span>
+          </div>
+          <small id="ayuda-email" class="ayuda">Le responderemos a esta dirección de email.</small>
+        </div>
+
+        <div class="contacto-form-group">
+          <label for="asunto">Asunto</label>
+          <div class="form-row">
+            <input type="text" name="asunto" id="asunto" aria-describedby="ayuda-asunto" minlength="1" list="asunto-options" />
+            <span class="emoji" id="asunto-span" aria-live="polite" hidden>⚠️</span>
+          </div>
+          <small id="ayuda-asunto" class="ayuda">El motivo de su consulta (cotización, agendar hora, etc).</small>
+          <datalist id="asunto-options">
+            <option>Agendar hora</option>
+            <option>Consulta</option> 
+           </datalist>
+        </div>
+
+        <div class="contacto-form-group">
+          <label for="mensaje">Mensaje <span>(requerido)</span></label>
+          <div class="form-row">
+            <textarea
+            name="mensaje"
+            id="mensaje"
+            minlength="4"
+            aria-describedby="ayuda-mensaje"
+            required
+          ></textarea>
+          <span class="emoji" id="mensaje-span" aria-live="polite" hidden>⚠️</span>
+          </div>
+          <small id="ayuda-mensaje" class="ayuda">Puede decirnos en qué podemos ayudarle.</small>
+        </div>
+
+        <input class="submit-button" type="submit" value="Enviar" />
+      </form>
+    </div>
+  </section>
+
+  <section id="map" class="map" aria-label="Ubicación en el mapa">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1127.729934885538!2d-70.42655063451954!3d-23.506670955216983!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96ae29d406423b67%3A0x442999e5e7e2f602!2sLa%20Portada!5e0!3m2!1ses-419!2scl!4v1621969989230!5m2!1ses-419!2scl"
+      allowfullscreen=""
+      title="Mapa de nuestro local en Google Maps"
+      loading="lazy"
+    ></iframe>
+  </section>
+</main>

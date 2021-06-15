@@ -1,0 +1,376 @@
+---
+title: Landing Page Template
+description: Landing Page Template
+keywords: Landing Page Template
+---
+
+<!DOCTYPE html>
+<html lang="es">
+  <head prefix="og: http://ogp.me/ns#">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ title or metadata.title}}</title>
+    <!--seo-->
+    <meta
+      name="description"
+      content="{{ description or metadata.description }}"
+    />
+    <meta name="keywords" content="{{ keywords or metadata.keywords }}" />
+    <meta name="author" content="Juan Garmendia" />
+    <!--og y twitter card-->
+    <!--og y twitter card-->
+
+    <!--icons y theme-->
+    <link rel="icon" href="/favicon.ico">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <link rel="manifest" href="/manifest.webmanifest">
+
+    <!-- fonts-->
+    <!-- [1] -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- [2] -->
+    <link
+      rel="preload"
+      as="style"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    />
+
+    <!-- [3] -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+
+    <!-- [4] -->
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      />
+    </noscript>
+
+    <!-- Images preload-->
+    {% if title == "Home Landing Page" %}
+    <link rel="preload" as="image" href="/images/600.jpg" />
+    {%endif%}
+    
+    <!-- css-->
+    <link rel="preload" href="/css/main.css" as="style">
+    <link rel="stylesheet" href="/css/main.css" media="print" onload="this.media='all'" />
+    {% if title == "Home Landing Page" %}
+    <link rel="stylesheet" href="/css/index.css"/>
+    {%endif%}
+    {% if title == "Contacto" %}
+    <link rel="preload" href="/css/contacto.css" as="style">
+    <link rel="stylesheet" href="/css/contacto.css"/>
+    {%endif%}
+    {% if title == "404 - Página no encontrada" %}
+    <link rel="stylesheet" href="/css/404.css" />
+    {%endif%}
+
+    <!-- Google tag-->
+    <!-- Google tag-->
+  </head>
+  <body>
+    <!-- Navegación principal-->
+    <aside id="sidenav-open">
+      <nav>
+        <div class="close-container">
+          <a
+            href="#"
+            id="sidenav-close"
+            class="close"
+            title="Cerrar Menu"
+            aria-label="Cerrar Menu"
+          >
+            <svg
+              id="icon_close"
+              class="icon icon-close"
+              version="1.1"
+              xmlns="http://www.w3.org/2000/svg"
+              width="28"
+              height="28"
+              role="presentation"
+              focusable="false"
+              aria-label="Cerrar Menu"
+              viewBox="0 0 32 32"
+            >
+              <title>Cerrar</title>
+              <path
+                d="M31.708 25.708c-0-0-0-0-0-0l-9.708-9.708 9.708-9.708c0-0 0-0 0-0 0.105-0.105 0.18-0.227 0.229-0.357 0.133-0.356 0.057-0.771-0.229-1.057l-4.586-4.586c-0.286-0.286-0.702-0.361-1.057-0.229-0.13 0.048-0.252 0.124-0.357 0.228 0 0-0 0-0 0l-9.708 9.708-9.708-9.708c-0-0-0-0-0-0-0.105-0.104-0.227-0.18-0.357-0.228-0.356-0.133-0.771-0.057-1.057 0.229l-4.586 4.586c-0.286 0.286-0.361 0.702-0.229 1.057 0.049 0.13 0.124 0.252 0.229 0.357 0 0 0 0 0 0l9.708 9.708-9.708 9.708c-0 0-0 0-0 0-0.104 0.105-0.18 0.227-0.229 0.357-0.133 0.355-0.057 0.771 0.229 1.057l4.586 4.586c0.286 0.286 0.702 0.361 1.057 0.229 0.13-0.049 0.252-0.124 0.357-0.229 0-0 0-0 0-0l9.708-9.708 9.708 9.708c0 0 0 0 0 0 0.105 0.105 0.227 0.18 0.357 0.229 0.356 0.133 0.771 0.057 1.057-0.229l4.586-4.586c0.286-0.286 0.362-0.702 0.229-1.057-0.049-0.13-0.124-0.252-0.229-0.357z"
+              ></path>
+            </svg>
+          </a>
+        </div>
+
+        <div class="nav-box">
+          <ul>
+            <li><a href="/">Inicio</a>
+              <ul>
+                <li><a href="/#servicios">Servicios</a></li>
+                <li><a href="/#datos-contacto">Nosotros</a></li>
+                <li><a href="#footer">Link</a></li>
+              </ul>
+            </li>
+            <li><a href="/contacto">Contacto</a></li>
+          </ul>
+        </div>
+      </nav>
+      <a
+        href="#"
+        id="sidenav-close-out"
+        title="Cerrar Menu"
+        aria-label="Cerrar Menu"
+      ></a>
+    </aside>
+
+    <div class="contenido">
+      <!--Top header-->
+      <header class="top-header">
+        <h1 class="logo">
+          <a href="/">{{ title or metadata.title }}</a>
+        </h1>
+        <a
+          href="#sidenav-open"
+          id="sidenav-button"
+          class="hamburger"
+          title="Abrir Menu"
+          aria-label="Abrir Menu"
+        >
+          <svg
+            id="icon_borgar"
+            class="icon icon-borgar"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            role="presentation"
+            focusable="false"
+            aria-label="Abrir menu"
+            width="32"
+            height="32"
+            viewBox="0 0 32 32"
+          >
+            <path d="M2 6h28v6h-28zM2 14h28v6h-28zM2 22h28v6h-28z"></path>
+          </svg>
+        </a>
+      </header>
+
+      <!--Contenido-->
+      {{ content | safe }}
+
+      <!-- Datos de contacto -->
+      <section id="datos-contacto" class="datos-contacto">
+        <h2 class="datos-contacto-title">Sobre Nosotros</h2>
+        <div class="datos-contacto-container">
+          <div class="datos-contacto-box">
+            <div class="datos-contacto-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-datos-contacto"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                role="presentation"
+                focusable="false"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M21 3l-6.5 18a0.55 .55 0 0 1 -1 0l-3.5 -7l-7 -3.5a0.55 .55 0 0 1 0 -1l18 -6.5"
+                />
+              </svg>
+              <h3>Dirección</h3>
+            </div>
+            <p>Calle falsa #123. Antofagasta, Chile</p>
+          </div>
+
+          <div class="datos-contacto-box">
+            <div class="datos-contacto-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-datos-contacto"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                role="presentation"
+                focusable="false"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <polyline points="3 7 12 13 21 7" />
+              </svg>
+              <h3>Email</h3>
+            </div>
+            <p><a href="mailto:email@mail.com">mail@email.com</a></p>
+          </div>
+
+          <div class="datos-contacto-box">
+            <div class="datos-contacto-row">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-datos-contacto"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                role="presentation"
+                focusable="false"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"
+                />
+              </svg>
+              <h3>Fono</h3>
+            </div>
+            <p><a href="tel:+56911223344">(+56) 9 11223344</a></p>
+          </div>
+        </div>
+      </section>
+
+      <!--Horarios y social-->
+
+      <div class="horas-social-container">
+        <!-- Horarios-->
+
+        <section id="horarios" class="horarios">
+          <div class="horarios-main">
+            <h3>Horarios</h3>
+            <div class="horarios-container">
+              <div class="horarios-container-row">
+                <h4 class="horarios-row-dias">Lunes a Viernes:</h4>
+                <p>08:00 - 18:30</p>
+              </div>
+              <div class="horarios-container-row">
+                <h4 class="horarios-row-dias">Sabados:</h4>
+                <p>09:00 - 14:00</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Social -->
+
+        <section id="social" class="social">
+          <div class="social-box">
+            <a href="mailto:email@mail.com" aria-label="Enviar un email">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-social"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                role="presentation"
+                focusable="false"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="3" y="5" width="18" height="14" rx="2" />
+                <polyline points="3 7 12 13 21 7" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="social-box">
+            <a href="https://twitter.com/" aria-label="Nuestro Twitter">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-social"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                role="presentation"
+                focusable="false"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c-.002 -.249 1.51 -2.772 1.818 -4.013z"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="social-box">
+            <a href="https://es-la.facebook.com/" aria-label="Nuestro Facebook">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-social"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                role="presentation"
+                focusable="false"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path
+                  d="M7 10v4h3v7h4v-7h3l1 -4h-4v-2a1 1 0 0 1 1 -1h3v-4h-3a5 5 0 0 0 -5 5v2h-3"
+                />
+              </svg>
+            </a>
+          </div>
+
+          <div class="social-box">
+            <a href="https://www.instagram.com/" aria-label="Nuestro Instagram">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-social"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                role="presentation"
+                focusable="false"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <rect x="4" y="4" width="16" height="16" rx="4" />
+                <circle cx="12" cy="12" r="3" />
+                <line x1="16.5" y1="7.5" x2="16.5" y2="7.501" />
+              </svg>
+            </a>
+          </div>
+
+          <div class="social-box">
+            <a
+              href="https://web.whatsapp.com/"
+              aria-label="Comunícate con nosotros por WhatsApp"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="icon-social"
+                width="44"
+                height="44"
+                viewBox="0 0 24 24"
+                role="presentation"
+                focusable="false"
+              >
+                <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+                <path d="M3 21l1.65 -3.8a9 9 0 1 1 3.4 2.9l-5.05 .9" />
+                <path
+                  d="M9 10a0.5 .5 0 0 0 1 0v-1a0.5 .5 0 0 0 -1 0v1a5 5 0 0 0 5 5h1a0.5 .5 0 0 0 0 -1h-1a0.5 .5 0 0 0 0 1"
+                />
+              </svg>
+            </a>
+          </div>
+
+        </section>
+      </div>
+
+      <!--footer-->
+      <footer id="footer" class="footer">
+        <small id="copyright">&copy; Copyright 2021, Example Corporation</small>
+        <small
+          >Desarrollado por
+          <a class="footer-link" href="https://jgarmendia.github.io/"
+            >Juan Garmendia</a
+          >, 2021.
+        </small>
+      </footer>
+    </div>
+
+    <script src="/js/app.js" defer></script>
+    {% if title == "Contacto" %}
+    <script src="/js/form.js" defer></script>  
+    {%endif%}
+  </body>
+</html>
