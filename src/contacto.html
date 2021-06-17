@@ -18,12 +18,17 @@ keywords: Contacto
     </div>
 
     <div id="contacto-form-container" class="contacto-form-container">
-      <form id="contacto-form" class="contacto-form" action="" method="get">
+      <form id="contacto-form" class="contacto-form" action="/gracias" method="post" data-netlify="true" netlify-honeypot="bot-field">
+
+        <div class="hidden">
+          <label>No llene esto si usted es un humano: </label>
+          <input name="bot-field" maxlength="8" />
+        </div>
 
         <div class="contacto-form-group">
           <label for="nombre">Nombre <span>(requerido)</span></label>
           <div class="form-row"> 
-            <input type="text" name="nombre" id="nombre" minlength="3" aria-describedby="ayuda-nombre" autocomplete="name" required />
+            <input type="text" name="nombre" id="nombre" minlength="3" maxlength="30" aria-describedby="ayuda-nombre" autocomplete="name" required />
             <span class="emoji" id="nombre-span" aria-live="polite" hidden>⚠️</span>
           </div>
           <small id="ayuda-nombre" class="ayuda">Su nombre completo para contactarle.</small>
@@ -32,7 +37,7 @@ keywords: Contacto
         <div class="contacto-form-group">
           <label for="email">Email <span>(requerido)</span></label>
           <div class="form-row">
-            <input type="email" name="email" id="email" minlength="8" aria-describedby="ayuda-email" autocomplete="email" required />
+            <input type="email" name="email" id="email" minlength="8" maxlength="40" aria-describedby="ayuda-email" autocomplete="email" required />
             <span class="emoji" id="email-span" aria-live="polite" hidden>⚠️</span>
           </div>
           <small id="ayuda-email" class="ayuda">Le responderemos a esta dirección de email.</small>
@@ -41,7 +46,7 @@ keywords: Contacto
         <div class="contacto-form-group">
           <label for="asunto">Asunto</label>
           <div class="form-row">
-            <input type="text" name="asunto" id="asunto" aria-describedby="ayuda-asunto" minlength="1" list="asunto-options" />
+            <input type="text" name="asunto" id="asunto" aria-describedby="ayuda-asunto" minlength="1" maxlength="20" list="asunto-options" />
             <span class="emoji" id="asunto-span" aria-live="polite" hidden>⚠️</span>
           </div>
           <small id="ayuda-asunto" class="ayuda">El motivo de su consulta (cotización, agendar hora, etc).</small>
@@ -58,6 +63,7 @@ keywords: Contacto
             name="mensaje"
             id="mensaje"
             minlength="4"
+            maxlength="80"
             aria-describedby="ayuda-mensaje"
             required
           ></textarea>
